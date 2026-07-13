@@ -83,11 +83,12 @@ h1{font-size:22px;font-weight:500;margin:0 0 4px}
 <line id="ar-cust-cm" class="step-el arr" x1="550" y1="130" x2="720" y2="90" marker-end="url(#arrow)"/>
 <path  id="ar-cm-opt" class="step-el arr" d="M680 92 L680 205 L440 400" stroke-dasharray="5 4" fill="none" marker-end="url(#arrow)"/>
 <line id="ar-entry-htb" class="step-el arr-ext" x1="742" y1="278" x2="818" y2="320" marker-end="url(#arrow-ext)"/>
+<line id="ar-htbe-contract" class="step-el arr-ext" x1="845" y1="349" x2="785" y2="398" marker-end="url(#arrow-ext)"/>
 <line id="ar-gform-case" class="step-el" stroke="#5E35B1" stroke-width="1.8" fill="none" x1="220" y1="265" x2="298" y2="290" marker-end="url(#arrow-gform)"/>
 <line id="ar-koukaku-case" class="step-el arr" x1="220" y1="345" x2="298" y2="318" marker-end="url(#arrow)"/>
 <line id="ar-case-entry" class="step-el arr" x1="500" y1="308" x2="538" y2="282" marker-end="url(#arrow)"/>
 <line id="ar-cust-entry" class="step-el arr" x1="600" y1="180" x2="632" y2="246" marker-end="url(#arrow)"/>
-<line id="ar-cust-opt" class="step-el arr-reg" x1="540" y1="182" x2="405" y2="398" marker-end="url(#arrow-reg)"/>
+<line id="ar-entry-opt" class="step-el arr-reg" x1="560" y1="302" x2="462" y2="398" marker-end="url(#arrow-reg)"/>
 <line id="ar-contract-opt" class="step-el arr-reg" x1="568" y1="430" x2="513" y2="430" marker-end="url(#arrow-reg)"/>
 <line id="ar-optm-opt" class="step-el arr" x1="220" y1="430" x2="268" y2="430" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
 <line id="ar-agency-contract" class="step-el arr" x1="820" y1="406" x2="793" y2="414" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
@@ -135,11 +136,11 @@ h1{font-size:22px;font-weight:500;margin:0 0 4px}
 </div>
 </div>
 
-<p class="foot">タグ：発行＝顧客ID新規采番／参照＝各マスタからLU取得／入力＝顧客が入力・直登録／登録＝別アプリから登録／更新＝今変わった。ポイント：案件管理アプリと顧客管理アプリの内容はエントリーチェックアプリで突合・精査して集約する。エントリーチェックアプリはHTBエナジーへ精査済み情報を連携し、供給を開始する。各アプリはIDだけ登録し、名称・料金・顧客情報は各マスタからLUで取得する。請求アプリ作成時に、契約・オプション契約とHTB請求一覧情報を加入者コードで同時に取り込む。</p>
+<p class="foot">タグ：発行＝顧客ID新規采番／参照＝各マスタからLU取得／入力＝顧客が入力・直登録／登録＝別アプリから登録／更新＝今変わった。ポイント：案件管理アプリと顧客管理アプリの内容はエントリーチェックアプリで突合・精査して集約する。エントリーチェックアプリはHTBエナジーへ精査済み情報を連携し、供給を開始する。契約アプリは、HTBエナジーからの供給開始日を受けて作成する（供給開始＝契約成立）。各アプリはIDだけ登録し、名称・料金・顧客情報は各マスタからLUで取得する。請求アプリ作成時に、契約・オプション契約とHTB請求一覧情報を加入者コードで同時に取り込む。</p>
 </div>
 
 <script>
-const ALL=['n-wp','m-cust','n-mail','g-form','n-koukaku','a-cust','a-case','n-entry','a-contract','a-opt','m-option','m-agency','m-plan','n-htbenergy','a-bill','ar-wp-cm','ar-wp-mail','ar-mail-cust','ar-cust-cm','ar-cm-opt','ar-entry-htb','ar-case-entry','ar-cust-entry','ar-gform-case','ar-koukaku-case','ar-cust-opt','ar-contract-opt','ar-optm-opt','ar-agency-contract','ar-plan-contract','ar-contract-bill','ar-opt-bill','a-invoice','ar-bill-invoice','n-htb','ar-htb-bill'];
+const ALL=['n-wp','m-cust','n-mail','g-form','n-koukaku','a-cust','a-case','n-entry','a-contract','a-opt','m-option','m-agency','m-plan','n-htbenergy','a-bill','ar-wp-cm','ar-wp-mail','ar-mail-cust','ar-cust-cm','ar-cm-opt','ar-entry-htb','ar-htbe-contract','ar-case-entry','ar-cust-entry','ar-gform-case','ar-koukaku-case','ar-entry-opt','ar-contract-opt','ar-optm-opt','ar-agency-contract','ar-plan-contract','ar-contract-bill','ar-opt-bill','a-invoice','ar-bill-invoice','n-htb','ar-htb-bill'];
 const P={in:{l:'入力',b:'#F1EFE8',f:'#5F5E5A'},num:{l:'発行',b:'#EAF3DE',f:'#3B6D11'},lu:{l:'参照',b:'#E6F1FB',f:'#185FA5'},reg:{l:'登録',b:'#ECE6F5',f:'#5B3B9E'},chg:{l:'更新',b:'#FAEEDA',f:'#854F0B'},ext:{l:'連携',b:'#EAE7E0',f:'#5A584F'},empty:{l:'空',b:'#F1EFE8',f:'#6b6a64'}};
 const T={new:{l:'新規',b:'#EAF3DE',f:'#3B6D11'},upd:{l:'更新',b:'#E6F1FB',f:'#185FA5'}};
 const SC=[
@@ -165,15 +166,17 @@ const SC=[
   c:[{app:'案件管理アプリ',note:'精査の対象（案件側）',rows:[{k:'申込コード',v:'LEAD20260601'},{k:'代理店ID',v:'D001'},{k:'プランID',v:'P001'}]},{app:'顧客管理アプリ',note:'精査の対象（顧客側）',rows:[{k:'顧客ID',v:'C001'},{k:'氏名・住所',v:'中澤 / 東京'}]},{app:'エントリーチェックアプリ',tag:'new',note:'案件×顧客を突合・精査し確定内容を集約',rows:[{k:'突合チェック',v:'OK',f:'in'},{k:'申込コード',v:'LEAD20260601（紐づけキー）'},{k:'顧客ID',v:'C001',f:'reg'},{k:'代理店ID',v:'D001',f:'reg'},{k:'プランID',v:'P001',f:'reg'}]}]},
  {a:['n-entry','n-htbenergy','ar-entry-htb'],t:'⑪ エントリーチェックアプリ → HTBエナジー（供給連携）',d:'エントリーチェックアプリの精査済み確定情報をHTBエナジーへ連携し、HTB側で電気の供給を開始する。供給開始日はHTB側で確定する（※契約アプリへの取り込み方法は要確認）。',
   c:[{app:'エントリーチェックアプリ → HTBエナジー',note:'精査済み確定情報を連携（供給依頼）',rows:[{k:'申込コード',v:'LEAD20260601',f:'ext'},{k:'顧客ID',v:'C001',f:'ext'},{k:'供給先住所',v:'東京',f:'ext'}]},{app:'HTBエナジー',note:'でんきの供給を開始',rows:[{k:'連携受領',v:'OK'},{k:'供給開始日',v:'2026/07/01（確定）',f:'in'}]}]},
- {a:['m-agency','m-plan','a-contract','ar-agency-contract','ar-plan-contract'],t:'⑫ 代理店マスタ・プランマスタ → 契約アプリ（ルックアップ）',d:'契約アプリに登録された代理店ID・プランIDをキーに、各マスタから名称などをルックアップして取得・表示する。代理店マスタから代理店名、プランマスタからプラン名・料金を引く。IDは登録、名称はマスタ参照という分担。',
+ {a:['n-htbenergy','a-contract','ar-htbe-contract'],t:'⑫ HTBエナジー → 契約アプリ',d:'HTBエナジーで供給が開始され、供給開始日・加入者コードが確定する。これを受けて契約アプリを作成する。契約IDを採番し、顧客ID・申込コードを引き継ぐ。供給開始＝契約成立。',
+  c:[{app:'HTBエナジー',note:'⑪の連携を受けて供給開始',rows:[{k:'供給開始日',v:'2026/07/01（確定）',f:'in'},{k:'加入者コード',v:'HTB-0001',f:'in'}]},{app:'契約アプリ',tag:'new',note:'契約ID采番＋HTBからの供給開始日を登録（供給開始＝契約成立）',rows:[{k:'契約ID',v:'K001',f:'num'},{k:'顧客ID',v:'C001',f:'reg'},{k:'申込コード',v:'LEAD20260601',f:'reg'},{k:'供給開始日',v:'2026/07/01',f:'ext'},{k:'加入者コード',v:'HTB-0001',f:'ext'},{k:'供給ステータス',v:'供給中',f:'reg'}]}]},
+ {a:['m-agency','m-plan','a-contract','ar-agency-contract','ar-plan-contract'],t:'⑬ 代理店マスタ・プランマスタ → 契約アプリ（ルックアップ）',d:'契約アプリに登録された代理店ID・プランIDをキーに、各マスタから名称などをルックアップして取得・表示する。代理店マスタから代理店名、プランマスタからプラン名・料金を引く。IDは登録、名称はマスタ参照という分担。',
   c:[{app:'代理店マスタ',note:'代理店IDで取得',rows:[{k:'代理店ID',v:'D001（キー）'},{k:'代理店名',v:'○○代理店',f:'lu'}]},{app:'プランマスタ',note:'プランIDで取得',rows:[{k:'プランID',v:'P001（キー）'},{k:'プラン名',v:'プランA',f:'lu'},{k:'月額',v:'¥10,000',f:'lu'}]},{app:'契約アプリ',tag:'upd',note:'各マスタからLUして表示',rows:[{k:'契約ID',v:'K001'},{k:'代理店名',v:'○○代理店（代理店マスタLU）',f:'lu'},{k:'プラン名',v:'プランA（プランマスタLU）',f:'lu'}]}]},
- {a:['a-cust','a-contract','a-opt','ar-cust-opt','ar-contract-opt'],t:'⑬ 顧客管理アプリ・契約アプリ → オプション契約アプリ',d:'顧客管理アプリと契約アプリのデータを起点に、オプション契約アプリを作成する。オプション契約IDを採番し、選択されたオプションID（マスタ参照キー）と顧客IDを登録する。申込コードで案件・契約と紐づく。',
-  c:[{app:'顧客管理アプリ',note:'申込コードで紐づく',rows:[{k:'申込コード',v:'LEAD20260601'}]},{app:'契約アプリ',note:'契約と紐づく',rows:[{k:'契約ID',v:'K001'},{k:'顧客ID',v:'C001'}]},{app:'オプション契約アプリ',tag:'new',note:'オプション契約ID采番＋オプションID・顧客IDを登録',rows:[{k:'オプション契約ID',v:'OP001',f:'num'},{k:'オプションID',v:'OPT01',f:'reg'},{k:'顧客ID',v:'C001',f:'reg'},{k:'申込コード',v:'LEAD20260601（紐づけキー）',f:'reg'}]}]},
- {a:['m-option','m-cust','a-opt','ar-optm-opt','ar-cm-opt'],t:'⑭ オプションマスタ・顧客マスタ → オプション契約アプリ（ルックアップ）',d:'⑬で登録されたオプションID・顧客IDをキーに、オプションマスタからオプション名・料金を、顧客マスタから氏名などの顧客情報をルックアップして取得・表示する。契約アプリと同じく、オプション契約アプリの顧客情報もマスタから取得できるようにしておく。オプションが増えてもマスタ追加だけで対応できる。',
+ {a:['n-entry','a-contract','a-opt','ar-entry-opt','ar-contract-opt'],t:'⑭ エントリーチェックアプリ・契約アプリ → オプション契約アプリ',d:'エントリーチェックアプリと契約アプリのデータを起点に、オプション契約アプリを作成する。オプション契約IDを採番し、選択されたオプションID（マスタ参照キー）と顧客IDを登録する。申込コードで案件・契約と紐づく。',
+  c:[{app:'エントリーチェックアプリ',note:'申込コードで紐づく（精査済み確定情報）',rows:[{k:'申込コード',v:'LEAD20260601'},{k:'顧客ID',v:'C001'}]},{app:'契約アプリ',note:'契約と紐づく',rows:[{k:'契約ID',v:'K001'},{k:'顧客ID',v:'C001'}]},{app:'オプション契約アプリ',tag:'new',note:'オプション契約ID采番＋オプションID・顧客IDを登録',rows:[{k:'オプション契約ID',v:'OP001',f:'num'},{k:'オプションID',v:'OPT01',f:'reg'},{k:'顧客ID',v:'C001',f:'reg'},{k:'申込コード',v:'LEAD20260601（紐づけキー）',f:'reg'}]}]},
+ {a:['m-option','m-cust','a-opt','ar-optm-opt','ar-cm-opt'],t:'⑮ オプションマスタ・顧客マスタ → オプション契約アプリ（ルックアップ）',d:'⑭で登録されたオプションID・顧客IDをキーに、オプションマスタからオプション名・料金を、顧客マスタから氏名などの顧客情報をルックアップして取得・表示する。契約アプリと同じく、オプション契約アプリの顧客情報もマスタから取得できるようにしておく。オプションが増えてもマスタ追加だけで対応できる。',
   c:[{app:'オプションマスタ',note:'オプションIDで取得',rows:[{k:'オプションID',v:'OPT01（キー）'},{k:'オプション名',v:'蓄電池オプション',f:'lu'},{k:'月額',v:'¥3,000',f:'lu'}]},{app:'顧客マスタ',note:'顧客IDで取得',rows:[{k:'顧客ID',v:'C001（キー）'},{k:'氏名',v:'中澤',f:'lu'},{k:'住所',v:'東京',f:'lu'}]},{app:'オプション契約アプリ',tag:'upd',note:'各マスタからLUして表示',rows:[{k:'オプション契約ID',v:'OP001'},{k:'オプション名',v:'蓄電池オプション（オプションマスタLU）',f:'lu'},{k:'氏名',v:'中澤（顧客マスタLU）',f:'lu'}]}]},
- {a:['a-contract','a-opt','a-bill','n-htb','ar-contract-bill','ar-opt-bill','ar-htb-bill'],t:'⑮ 契約・オプション契約・HTB請求一覧情報 → 請求アプリ',d:'契約アプリとオプション契約アプリのデータを起点に請求アプリを作成する。請求IDを採番し顧客IDを引き継ぐ。あわせて、HTBの請求一覧情報を加入者コードで突合し、同時に請求アプリへ取り込む。本契約・オプション・HTB連携がひとつの請求にまとまる。',
+ {a:['a-contract','a-opt','a-bill','n-htb','ar-contract-bill','ar-opt-bill','ar-htb-bill'],t:'⑯ 契約・オプション契約・HTB請求一覧情報 → 請求アプリ',d:'契約アプリとオプション契約アプリのデータを起点に請求アプリを作成する。請求IDを採番し顧客IDを引き継ぐ。あわせて、HTBの請求一覧情報を加入者コードで突合し、同時に請求アプリへ取り込む。本契約・オプション・HTB連携がひとつの請求にまとまる。',
   c:[{app:'契約アプリ',note:'本契約を請求対象に',rows:[{k:'契約ID',v:'K001'},{k:'顧客ID',v:'C001'}]},{app:'オプション契約アプリ',note:'オプションも請求対象に',rows:[{k:'オプション契約ID',v:'OP001'}]},{app:'HTB請求一覧情報',note:'加入者コードで突合（同時取り込み）',rows:[{k:'加入者コード',v:'HTB-0001',f:'in'}]},{app:'請求アプリ',tag:'new',note:'請求ID采番＋顧客ID引き継ぎ＋加入者コード連携',rows:[{k:'請求ID',v:'B001',f:'num'},{k:'顧客ID',v:'C001',f:'reg'},{k:'加入者コード',v:'HTB-0001',f:'reg'}]}]},
- {a:['a-bill','a-invoice','ar-bill-invoice'],t:'⑯ 請求アプリ → 請求書発行アプリ',d:'請求アプリのデータを起点に請求書発行アプリを作成する。請求ID・顧客IDを引き継ぎ、合計金額を確定して請求書を発行する。',
+ {a:['a-bill','a-invoice','ar-bill-invoice'],t:'⑰ 請求アプリ → 請求書発行アプリ',d:'請求アプリのデータを起点に請求書発行アプリを作成する。請求ID・顧客IDを引き継ぎ、合計金額を確定して請求書を発行する。',
   c:[{app:'請求アプリ',note:'請求を発行対象に',rows:[{k:'請求ID',v:'B001'},{k:'顧客ID',v:'C001'}]},{app:'請求書発行アプリ',tag:'new',note:'請求ID/顧客ID引き継ぎ＋合計金額を確定',rows:[{k:'請求ID',v:'B001',f:'reg'},{k:'顧客ID',v:'C001',f:'reg'},{k:'合計金額',v:'¥120,000',f:'num'}]}]}
 ];
 
