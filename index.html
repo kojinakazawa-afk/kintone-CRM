@@ -53,7 +53,7 @@ h1{font-size:22px;font-weight:500;margin:0 0 4px}
 <body>
 <div class="wrap">
 <h1>フラットエナジーCRM</h1>
-<p class="sub">顧客の入口（左上）と案件の入口（左下）が、エントリーチェックアプリでの精査を経て中央の契約アプリ・オプション契約アプリに集約。エントリーチェックアプリはHTBエナジーと供給連携し、各アプリはマスタからルックアップで名称・顧客情報を取得して、請求 → 請求書発行へ流れます。矢印で1ステップずつ進めてください。</p>
+<p class="sub">顧客の入口（左上）と案件の入口（左下）が、エントリーチェックアプリでの精査を経て中央の契約アプリ・オプション契約アプリに集約。エントリーチェックアプリはHTBエナジーと供給連携し、契約・オプション契約はマスタからルックアップで名称・料金を取得し、請求・請求書発行は契約側の値をスナップショットでコピーして保持します。矢印で1ステップずつ進めてください。</p>
 
 <div class="layout">
 <div class="col-fig">
@@ -112,9 +112,9 @@ h1{font-size:22px;font-weight:500;margin:0 0 4px}
 <g id="n-htbenergy" class="step-el"><rect class="c-ext" x="820" y="300" width="158" height="46" rx="6"/><text class="th" x="899" y="322" text-anchor="middle" fill="#2b2b29">HTBエナジー</text><text class="ts" x="899" y="338" text-anchor="middle" fill="#6b6a64">でんき供給・供給開始日</text></g>
 <g id="m-agency" class="step-el"><rect class="c-amber" x="820" y="383" width="158" height="46" rx="6"/><text class="th" x="899" y="405" text-anchor="middle" fill="#633806">代理店マスタ</text><text class="ts" x="899" y="421" text-anchor="middle" fill="#854F0B">代理店ID・代理店名</text></g>
 <g id="m-plan" class="step-el"><rect class="c-amber" x="820" y="440" width="158" height="46" rx="6"/><text class="th" x="899" y="462" text-anchor="middle" fill="#633806">プランマスタ</text><text class="ts" x="899" y="478" text-anchor="middle" fill="#854F0B">プランID・プラン名・料金</text></g>
-<g id="a-bill" class="step-el"><rect class="c-bill" x="435" y="510" width="200" height="50" rx="6"/><text class="th" x="535" y="533" text-anchor="middle" fill="#8A1547">請求アプリ</text><text class="ts" x="535" y="550" text-anchor="middle" fill="#B0205B">請求ID・顧客ID</text></g>
+<g id="a-bill" class="step-el"><rect class="c-blue" x="435" y="510" width="200" height="50" rx="6"/><text class="th" x="535" y="533" text-anchor="middle" fill="#0C447C">請求アプリ</text><text class="ts" x="535" y="550" text-anchor="middle" fill="#185FA5">契約からスナップショット</text></g>
 <g id="n-htb" class="step-el"><rect class="box" x="700" y="510" width="180" height="50" rx="6"/><text class="th" x="790" y="533" text-anchor="middle" fill="#2b2b29">HTB請求一覧情報</text><text class="ts" x="790" y="550" text-anchor="middle" fill="#6b6a64">加入者コード</text></g>
-<g id="a-invoice" class="step-el"><rect class="c-invoice" x="435" y="600" width="200" height="50" rx="6"/><text class="th" x="535" y="623" text-anchor="middle" fill="#6E0F38">請求書発行アプリ</text><text class="ts" x="535" y="640" text-anchor="middle" fill="#8A1547">請求ID・顧客ID・合計金額</text></g>
+<g id="a-invoice" class="step-el"><rect class="c-blue" x="435" y="600" width="200" height="50" rx="6"/><text class="th" x="535" y="623" text-anchor="middle" fill="#0C447C">請求書発行アプリ</text><text class="ts" x="535" y="640" text-anchor="middle" fill="#185FA5">請求からスナップショット・合計金額</text></g>
 </svg>
 <div class="nav">
   <button onclick="go(-1)" id="prev" aria-label="前のステップ">&#8592;</button>
@@ -136,12 +136,12 @@ h1{font-size:22px;font-weight:500;margin:0 0 4px}
 </div>
 </div>
 
-<p class="foot">タグ：発行＝顧客ID新規采番／参照＝各マスタからLU取得／入力＝顧客が入力・直登録／登録＝別アプリから登録／更新＝今変わった。ポイント：案件管理アプリと顧客管理アプリの内容はエントリーチェックアプリで突合・精査して集約する。エントリーチェックアプリはHTBエナジーへ精査済み情報を連携し、供給を開始する。契約アプリは、HTBエナジーからの供給開始日を受けて作成する（供給開始＝契約成立）。各アプリはIDだけ登録し、名称・料金・顧客情報は各マスタからLUで取得する。請求アプリ作成時に、契約・オプション契約とHTB請求一覧情報を加入者コードで同時に取り込む。</p>
+<p class="foot">タグ：発行＝顧客ID新規采番／参照＝各マスタからLU取得／入力＝顧客が入力・直登録／登録＝別アプリから登録／更新＝今変わった／スナップショット＝その時点の値をコピーして保持（以後マスタが変わっても不変）。ポイント：案件管理アプリと顧客管理アプリの内容はエントリーチェックアプリで突合・精査して集約する。エントリーチェックアプリはHTBエナジーへ精査済み情報を連携し、供給を開始する。契約アプリは、HTBエナジーからの供給開始日を受けて作成する（供給開始＝契約成立）。各アプリはIDだけ登録し、名称・料金・顧客情報は各マスタからLUで取得する。請求アプリ作成時に、契約・オプション契約とHTB請求一覧情報を加入者コードで同時に取り込む。</p>
 </div>
 
 <script>
 const ALL=['n-wp','m-cust','n-mail','g-form','n-koukaku','a-cust','a-case','n-entry','a-contract','a-opt','m-option','m-agency','m-plan','n-htbenergy','a-bill','ar-wp-cm','ar-wp-mail','ar-mail-cust','ar-cust-cm','ar-cm-opt','ar-entry-htb','ar-htbe-contract','ar-case-entry','ar-cust-entry','ar-gform-case','ar-koukaku-case','ar-entry-opt','ar-contract-opt','ar-optm-opt','ar-agency-contract','ar-plan-contract','ar-contract-bill','ar-opt-bill','a-invoice','ar-bill-invoice','n-htb','ar-htb-bill'];
-const P={in:{l:'入力',b:'#F1EFE8',f:'#5F5E5A'},num:{l:'発行',b:'#EAF3DE',f:'#3B6D11'},lu:{l:'参照',b:'#E6F1FB',f:'#185FA5'},reg:{l:'登録',b:'#ECE6F5',f:'#5B3B9E'},chg:{l:'更新',b:'#FAEEDA',f:'#854F0B'},ext:{l:'連携',b:'#EAE7E0',f:'#5A584F'},empty:{l:'空',b:'#F1EFE8',f:'#6b6a64'}};
+const P={in:{l:'入力',b:'#F1EFE8',f:'#5F5E5A'},num:{l:'発行',b:'#EAF3DE',f:'#3B6D11'},lu:{l:'参照',b:'#E6F1FB',f:'#185FA5'},reg:{l:'登録',b:'#ECE6F5',f:'#5B3B9E'},chg:{l:'更新',b:'#FAEEDA',f:'#854F0B'},snap:{l:'スナップショット',b:'#E6F1FB',f:'#0C447C'},ext:{l:'連携',b:'#EAE7E0',f:'#5A584F'},empty:{l:'空',b:'#F1EFE8',f:'#6b6a64'}};
 const T={new:{l:'新規',b:'#EAF3DE',f:'#3B6D11'},upd:{l:'更新',b:'#E6F1FB',f:'#185FA5'}};
 const SC=[
  {a:['n-wp'],t:'① WordPress申込フォームでアドレスを入力',d:'顧客申込フォームで、まずメールアドレスだけを入力して送信する。',
@@ -174,10 +174,10 @@ const SC=[
   c:[{app:'エントリーチェックアプリ',note:'申込コードで紐づく（精査済み確定情報）',rows:[{k:'申込コード',v:'LEAD20260601'},{k:'顧客ID',v:'C001'}]},{app:'契約アプリ',note:'契約と紐づく',rows:[{k:'契約ID',v:'K001'},{k:'顧客ID',v:'C001'}]},{app:'オプション契約アプリ',tag:'new',note:'オプション契約ID采番＋オプションID・顧客IDを登録',rows:[{k:'オプション契約ID',v:'OP001',f:'num'},{k:'オプションID',v:'OPT01',f:'reg'},{k:'顧客ID',v:'C001',f:'reg'},{k:'申込コード',v:'LEAD20260601（紐づけキー）',f:'reg'}]}]},
  {a:['m-option','m-cust','a-opt','ar-optm-opt','ar-cm-opt'],t:'⑮ オプションマスタ・顧客マスタ → オプション契約アプリ（ルックアップ）',d:'⑭で登録されたオプションID・顧客IDをキーに、オプションマスタからオプション名・料金を、顧客マスタから氏名などの顧客情報をルックアップして取得・表示する。契約アプリと同じく、オプション契約アプリの顧客情報もマスタから取得できるようにしておく。オプションが増えてもマスタ追加だけで対応できる。',
   c:[{app:'オプションマスタ',note:'オプションIDで取得',rows:[{k:'オプションID',v:'OPT01（キー）'},{k:'オプション名',v:'蓄電池オプション',f:'lu'},{k:'月額',v:'¥3,000',f:'lu'}]},{app:'顧客マスタ',note:'顧客IDで取得',rows:[{k:'顧客ID',v:'C001（キー）'},{k:'氏名',v:'中澤',f:'lu'},{k:'住所',v:'東京',f:'lu'}]},{app:'オプション契約アプリ',tag:'upd',note:'各マスタからLUして表示',rows:[{k:'オプション契約ID',v:'OP001'},{k:'オプション名',v:'蓄電池オプション（オプションマスタLU）',f:'lu'},{k:'氏名',v:'中澤（顧客マスタLU）',f:'lu'}]}]},
- {a:['a-contract','a-opt','a-bill','n-htb','ar-contract-bill','ar-opt-bill','ar-htb-bill'],t:'⑯ 契約・オプション契約・HTB請求一覧情報 → 請求アプリ',d:'契約アプリとオプション契約アプリのデータを起点に請求アプリを作成する。請求IDを採番し顧客IDを引き継ぐ。あわせて、HTBの請求一覧情報を加入者コードで突合し、同時に請求アプリへ取り込む。本契約・オプション・HTB連携がひとつの請求にまとまる。',
-  c:[{app:'契約アプリ',note:'本契約を請求対象に',rows:[{k:'契約ID',v:'K001'},{k:'顧客ID',v:'C001'}]},{app:'オプション契約アプリ',note:'オプションも請求対象に',rows:[{k:'オプション契約ID',v:'OP001'}]},{app:'HTB請求一覧情報',note:'加入者コードで突合（同時取り込み）',rows:[{k:'加入者コード',v:'HTB-0001',f:'in'}]},{app:'請求アプリ',tag:'new',note:'請求ID采番＋顧客ID引き継ぎ＋加入者コード連携',rows:[{k:'請求ID',v:'B001',f:'num'},{k:'顧客ID',v:'C001',f:'reg'},{k:'加入者コード',v:'HTB-0001',f:'reg'}]}]},
- {a:['a-bill','a-invoice','ar-bill-invoice'],t:'⑰ 請求アプリ → 請求書発行アプリ',d:'請求アプリのデータを起点に請求書発行アプリを作成する。請求ID・顧客IDを引き継ぎ、合計金額を確定して請求書を発行する。',
-  c:[{app:'請求アプリ',note:'請求を発行対象に',rows:[{k:'請求ID',v:'B001'},{k:'顧客ID',v:'C001'}]},{app:'請求書発行アプリ',tag:'new',note:'請求ID/顧客ID引き継ぎ＋合計金額を確定',rows:[{k:'請求ID',v:'B001',f:'reg'},{k:'顧客ID',v:'C001',f:'reg'},{k:'合計金額',v:'¥120,000',f:'num'}]}]}
+ {a:['a-contract','a-opt','a-bill','n-htb','ar-contract-bill','ar-opt-bill','ar-htb-bill'],t:'⑯ 契約・オプション契約・HTB請求一覧情報 → 請求アプリ（スナップショット）',d:'契約アプリとオプション契約アプリから、請求時点の契約内容・金額をスナップショットでコピーして請求アプリを作成する（マスタからのLUではない）。請求IDを採番し、あわせてHTBの請求一覧情報を加入者コードで突合して同時に取り込む。コピーなので、あとからプランマスタの料金が改定されても、この請求の金額は変わらない。',
+  c:[{app:'契約アプリ',note:'コピー元（電気の契約内容・金額）',rows:[{k:'契約ID',v:'K001'},{k:'顧客ID',v:'C001'},{k:'プラン名',v:'プランA'},{k:'電気料金',v:'¥10,000'}]},{app:'オプション契約アプリ',note:'コピー元（オプションの内容・金額）',rows:[{k:'オプション契約ID',v:'OP001'},{k:'オプション名',v:'蓄電池オプション'},{k:'月額',v:'¥3,000'}]},{app:'HTB請求一覧情報',note:'加入者コードで突合（同時取り込み）',rows:[{k:'加入者コード',v:'HTB-0001',f:'in'},{k:'使用量・従量料金',v:'HTBから受領',f:'ext'}]},{app:'請求アプリ',tag:'new',note:'請求ID采番＋契約/OP/HTBの値をコピーして保持',rows:[{k:'請求ID',v:'B001',f:'num'},{k:'顧客ID',v:'C001',f:'snap'},{k:'プラン名・電気料金',v:'プランA / ¥10,000',f:'snap'},{k:'オプション名・料金',v:'蓄電池 / ¥3,000',f:'snap'},{k:'加入者コード',v:'HTB-0001',f:'snap'}]}]},
+ {a:['a-bill','a-invoice','ar-bill-invoice'],t:'⑰ 請求アプリ → 請求書発行アプリ（スナップショット）',d:'請求アプリの明細を請求書発行アプリへスナップショットでコピーし、合計金額を確定して請求書を発行する。発行済みの請求書は、あとから契約内容やマスタが変わっても内容が変わらない。',
+  c:[{app:'請求アプリ',note:'コピー元（請求明細）',rows:[{k:'請求ID',v:'B001'},{k:'顧客ID',v:'C001'},{k:'電気料金',v:'¥10,000'},{k:'オプション料金',v:'¥3,000'}]},{app:'請求書発行アプリ',tag:'new',note:'請求明細をコピーして保持＋合計金額を確定',rows:[{k:'請求ID',v:'B001',f:'snap'},{k:'顧客ID',v:'C001',f:'snap'},{k:'明細（電気・オプション）',v:'¥10,000 / ¥3,000',f:'snap'},{k:'合計金額',v:'¥13,000',f:'num'}]}]}
 ];
 
 let idx=0;
