@@ -57,7 +57,7 @@ h1{font-size:22px;font-weight:500;margin:0 0 4px}
 
 <div class="layout">
 <div class="col-fig">
-<svg width="100%" viewBox="0 0 990 670" role="img" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 990 750" role="img" xmlns="http://www.w3.org/2000/svg">
 <title>申込〜契約フロー</title><desc>顧客の入口と案件の入口が、エントリーチェックアプリ（案件管理と顧客管理の内容を精査するアプリ）を経て中央のオプション契約アプリと契約アプリに集約。エントリーチェックアプリはHTBエナジーへ精査済み情報を連携し供給を開始する。契約アプリは顧客マスタ・代理店マスタ・プランマスタから、オプション契約アプリはオプションマスタと顧客マスタからルックアップで名称・顧客情報を取得し、契約・オプション・HTB請求一覧情報から請求アプリ、請求書発行アプリへ流れる図</desc>
 <defs>
   <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -81,25 +81,26 @@ h1{font-size:22px;font-weight:500;margin:0 0 4px}
 <line id="ar-wp-mail" class="step-el arr" x1="130" y1="90" x2="130" y2="130" marker-end="url(#arrow)"/>
 <line id="ar-mail-cust" class="step-el arr" x1="220" y1="155" x2="470" y2="155" marker-end="url(#arrow)"/>
 <line id="ar-cust-cm" class="step-el arr" x1="550" y1="130" x2="720" y2="90" marker-end="url(#arrow)"/>
-<path  id="ar-cm-opt" class="step-el arr" d="M680 92 L680 205 L440 400" stroke-dasharray="5 4" fill="none" marker-end="url(#arrow)"/>
+<path  id="ar-cm-opt" class="step-el arr" d="M680 92 L680 205 L440 468" stroke-dasharray="5 4" fill="none" marker-end="url(#arrow)"/>
 <line id="ar-entry-htb" class="step-el arr-ext" x1="742" y1="278" x2="797" y2="274" marker-end="url(#arrow-ext)"/>
-<line id="ar-htbe-progc" class="step-el arr-ext" x1="806" y1="296" x2="772" y2="340" marker-end="url(#arrow-ext)"/>
-<line id="ar-htbe-progs" class="step-el arr-ext" x1="882" y1="296" x2="882" y2="328" marker-end="url(#arrow-ext)"/>
-<path id="ar-progc-contract" class="step-el arr-reg" d="M692 374 L682 398" fill="none" marker-end="url(#arrow-reg)"/>
-<line id="ar-progs-contract" class="step-el arr-reg" x1="830" y1="374" x2="772" y2="398" marker-end="url(#arrow-reg)"/>
-<line id="ar-entry-contract" class="step-el arr-reg" x1="590" y1="302" x2="608" y2="398" marker-end="url(#arrow-reg)"/>
+<line id="ar-htbe-progc" class="step-el arr-ext" x1="806" y1="296" x2="773" y2="326" marker-end="url(#arrow-ext)"/>
+<line id="ar-htbe-progs" class="step-el arr-ext" x1="882" y1="296" x2="882" y2="314" marker-end="url(#arrow-ext)"/>
+<line id="ar-progc-agg" class="step-el arr-reg" x1="695" y1="360" x2="701" y2="376" marker-end="url(#arrow-reg)"/>
+<line id="ar-progs-agg" class="step-el arr-reg" x1="812" y1="360" x2="795" y2="378" marker-end="url(#arrow-reg)"/>
+<path id="ar-entry-agg" class="step-el arr-reg" d="M585 300 L588 388 L599 400" fill="none" marker-end="url(#arrow-reg)"/>
+<line id="ar-agg-contract" class="step-el arr-reg" x1="710" y1="422" x2="702" y2="468" marker-end="url(#arrow-reg)"/>
 <line id="ar-gform-case" class="step-el" stroke="#5E35B1" stroke-width="1.8" fill="none" x1="220" y1="265" x2="298" y2="290" marker-end="url(#arrow-gform)"/>
 <line id="ar-koukaku-case" class="step-el arr" x1="220" y1="345" x2="298" y2="318" marker-end="url(#arrow)"/>
 <line id="ar-case-entry" class="step-el arr" x1="500" y1="308" x2="538" y2="282" marker-end="url(#arrow)"/>
 <line id="ar-cust-entry" class="step-el arr" x1="600" y1="180" x2="632" y2="246" marker-end="url(#arrow)"/>
-<line id="ar-contract-opt" class="step-el arr-reg" x1="568" y1="430" x2="513" y2="430" marker-end="url(#arrow-reg)"/>
-<line id="ar-optm-opt" class="step-el arr" x1="220" y1="430" x2="268" y2="430" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
-<line id="ar-agency-contract" class="step-el arr" x1="820" y1="406" x2="793" y2="414" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
-<line id="ar-plan-contract" class="step-el arr" x1="820" y1="463" x2="793" y2="448" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
-<line id="ar-contract-bill" class="step-el arr-reg" x1="662" y1="460" x2="566" y2="508" marker-end="url(#arrow-reg)"/>
-<line id="ar-opt-bill" class="step-el arr-reg" x1="430" y1="460" x2="504" y2="508" marker-end="url(#arrow-reg)"/>
-<line id="ar-bill-invoice" class="step-el arr-reg" x1="535" y1="560" x2="535" y2="600" marker-end="url(#arrow-reg)"/>
-<line id="ar-htb-bill" class="step-el arr" x1="700" y1="535" x2="637" y2="535" marker-end="url(#arrow)"/>
+<line id="ar-contract-opt" class="step-el arr-reg" x1="568" y1="500" x2="513" y2="500" marker-end="url(#arrow-reg)"/>
+<line id="ar-optm-opt" class="step-el arr" x1="220" y1="498" x2="268" y2="502" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<line id="ar-agency-contract" class="step-el arr" x1="820" y1="485" x2="793" y2="490" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<line id="ar-plan-contract" class="step-el arr" x1="820" y1="530" x2="793" y2="512" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<line id="ar-contract-bill" class="step-el arr-reg" x1="662" y1="530" x2="566" y2="566" marker-end="url(#arrow-reg)"/>
+<line id="ar-opt-bill" class="step-el arr-reg" x1="430" y1="530" x2="504" y2="566" marker-end="url(#arrow-reg)"/>
+<line id="ar-bill-invoice" class="step-el arr-reg" x1="535" y1="618" x2="535" y2="666" marker-end="url(#arrow-reg)"/>
+<line id="ar-htb-bill" class="step-el arr" x1="700" y1="593" x2="637" y2="593" marker-end="url(#arrow)"/>
 
 <g id="n-wp" class="step-el"><rect class="box" x="40" y="40" width="180" height="50" rx="6"/><text class="th" x="130" y="63" text-anchor="middle" fill="#2b2b29">WordPress</text><text class="ts" x="130" y="80" text-anchor="middle" fill="#6b6a64">顧客申込フォーム</text></g>
 <g id="m-cust" class="step-el"><rect class="c-amber" x="660" y="40" width="190" height="50" rx="6"/><text class="th" x="755" y="63" text-anchor="middle" fill="#633806">顧客マスタ</text><text class="ts" x="755" y="80" text-anchor="middle" fill="#854F0B">メール照合・顧客ID・氏名</text></g>
@@ -109,17 +110,18 @@ h1{font-size:22px;font-weight:500;margin:0 0 4px}
 <g id="n-koukaku" class="step-el"><rect class="box" x="40" y="320" width="180" height="50" rx="6"/><text class="th" x="130" y="343" text-anchor="middle" fill="#2b2b29">後確電話</text><text class="ts" x="130" y="360" text-anchor="middle" fill="#6b6a64">後確結果 OK / NG</text></g>
 <g id="a-case" class="step-el"><rect class="c-blue" x="300" y="280" width="200" height="50" rx="6"/><text class="th" x="400" y="303" text-anchor="middle" fill="#0C447C">案件管理アプリ</text><text class="ts" x="400" y="320" text-anchor="middle" fill="#185FA5">代理店ID・プランID</text></g>
 <g id="n-entry" class="step-el"><rect class="c-blue" x="540" y="248" width="200" height="52" rx="6"/><text class="th" x="640" y="270" text-anchor="middle" fill="#0C447C">エントリーチェックアプリ</text><text class="ts" x="640" y="288" text-anchor="middle" fill="#185FA5">案件×顧客を精査</text></g>
-<g id="m-option" class="step-el"><rect class="c-amber" x="40" y="407" width="180" height="46" rx="6"/><text class="th" x="130" y="429" text-anchor="middle" fill="#633806">オプションマスタ</text><text class="ts" x="130" y="445" text-anchor="middle" fill="#854F0B">オプションID・名称・料金</text></g>
-<g id="a-opt" class="step-el"><rect class="c-main" x="270" y="400" width="240" height="60" rx="8" filter="url(#soft)"/><text class="thm" x="390" y="427" text-anchor="middle" fill="#2E5A0E">オプション契約アプリ</text><text class="ts" x="390" y="446" text-anchor="middle" fill="#3B6D11">オプション契約ID・オプションID(名称LU)</text></g>
-<g id="a-contract" class="step-el"><rect class="c-main" x="570" y="400" width="220" height="60" rx="8" filter="url(#soft)"/><text class="thm" x="680" y="427" text-anchor="middle" fill="#2E5A0E">契約アプリ</text><text class="ts" x="680" y="446" text-anchor="middle" fill="#3B6D11">契約ID＋名称(各マスタLU)</text></g>
+<g id="m-option" class="step-el"><rect class="c-amber" x="40" y="477" width="180" height="46" rx="6"/><text class="th" x="130" y="499" text-anchor="middle" fill="#633806">オプションマスタ</text><text class="ts" x="130" y="515" text-anchor="middle" fill="#854F0B">オプションID・名称・料金</text></g>
+<g id="a-opt" class="step-el"><rect class="c-main" x="270" y="470" width="240" height="60" rx="8" filter="url(#soft)"/><text class="thm" x="390" y="497" text-anchor="middle" fill="#2E5A0E">オプション契約アプリ</text><text class="ts" x="390" y="516" text-anchor="middle" fill="#3B6D11">オプション契約ID・オプションID(名称LU)</text></g>
+<g id="a-contract" class="step-el"><rect class="c-main" x="570" y="470" width="220" height="60" rx="8" filter="url(#soft)"/><text class="thm" x="680" y="497" text-anchor="middle" fill="#2E5A0E">契約アプリ</text><text class="ts" x="680" y="516" text-anchor="middle" fill="#3B6D11">契約ID＋名称(各マスタLU)</text></g>
 <g id="n-htbenergy" class="step-el"><rect class="c-ext" x="800" y="250" width="160" height="46" rx="6"/><text class="th" x="880" y="272" text-anchor="middle" fill="#2b2b29">HTBエナジー</text><text class="ts" x="880" y="288" text-anchor="middle" fill="#6b6a64">でんき供給・供給開始日</text></g>
-<g id="n-htbprog-c" class="step-el"><rect class="c-ext" x="610" y="330" width="165" height="44" rx="6"/><text class="th" x="692" y="351" text-anchor="middle" fill="#2b2b29">HTB進捗データ</text><text class="ts" x="692" y="366" text-anchor="middle" fill="#6b6a64">顧客ベース</text></g>
-<g id="n-htbprog-s" class="step-el"><rect class="c-ext" x="800" y="330" width="165" height="44" rx="6"/><text class="th" x="882" y="351" text-anchor="middle" fill="#2b2b29">HTB進捗データ</text><text class="ts" x="882" y="366" text-anchor="middle" fill="#6b6a64">サービスベース</text></g>
-<g id="m-agency" class="step-el"><rect class="c-amber" x="820" y="383" width="158" height="46" rx="6"/><text class="th" x="899" y="405" text-anchor="middle" fill="#633806">代理店マスタ</text><text class="ts" x="899" y="421" text-anchor="middle" fill="#854F0B">代理店ID・代理店名</text></g>
-<g id="m-plan" class="step-el"><rect class="c-amber" x="820" y="440" width="158" height="46" rx="6"/><text class="th" x="899" y="462" text-anchor="middle" fill="#633806">プランマスタ</text><text class="ts" x="899" y="478" text-anchor="middle" fill="#854F0B">プランID・プラン名・料金</text></g>
-<g id="a-bill" class="step-el"><rect class="c-blue" x="435" y="510" width="200" height="50" rx="6"/><text class="th" x="535" y="533" text-anchor="middle" fill="#0C447C">請求アプリ</text><text class="ts" x="535" y="550" text-anchor="middle" fill="#185FA5">契約からスナップショット</text></g>
-<g id="n-htb" class="step-el"><rect class="box" x="700" y="510" width="180" height="50" rx="6"/><text class="th" x="790" y="533" text-anchor="middle" fill="#2b2b29">HTB請求一覧情報</text><text class="ts" x="790" y="550" text-anchor="middle" fill="#6b6a64">加入者コード</text></g>
-<g id="a-invoice" class="step-el"><rect class="c-blue" x="435" y="600" width="200" height="50" rx="6"/><text class="th" x="535" y="623" text-anchor="middle" fill="#0C447C">請求書発行アプリ</text><text class="ts" x="535" y="640" text-anchor="middle" fill="#185FA5">請求からスナップショット・合計金額</text></g>
+<g id="n-htbprog-c" class="step-el"><rect class="c-ext" x="610" y="316" width="165" height="44" rx="6"/><text class="th" x="692" y="337" text-anchor="middle" fill="#2b2b29">HTB進捗データ</text><text class="ts" x="692" y="352" text-anchor="middle" fill="#6b6a64">顧客ベース</text></g>
+<g id="n-htbprog-s" class="step-el"><rect class="c-ext" x="800" y="316" width="165" height="44" rx="6"/><text class="th" x="882" y="337" text-anchor="middle" fill="#2b2b29">HTB進捗データ</text><text class="ts" x="882" y="352" text-anchor="middle" fill="#6b6a64">サービスベース</text></g>
+<g id="n-htbagg" class="step-el"><rect class="c-ext" x="600" y="376" width="210" height="46" rx="7"/><text class="thm" x="705" y="399" text-anchor="middle" fill="#2b2b29">HTB集約データ</text><text class="ts" x="705" y="415" text-anchor="middle" fill="#6b6a64">HTBデータ＋精査済み情報を一度集約</text></g>
+<g id="m-agency" class="step-el"><rect class="c-amber" x="820" y="462" width="158" height="46" rx="6"/><text class="th" x="899" y="484" text-anchor="middle" fill="#633806">代理店マスタ</text><text class="ts" x="899" y="500" text-anchor="middle" fill="#854F0B">代理店ID・代理店名</text></g>
+<g id="m-plan" class="step-el"><rect class="c-amber" x="820" y="514" width="158" height="46" rx="6"/><text class="th" x="899" y="536" text-anchor="middle" fill="#633806">プランマスタ</text><text class="ts" x="899" y="552" text-anchor="middle" fill="#854F0B">プランID・プラン名・料金</text></g>
+<g id="a-bill" class="step-el"><rect class="c-blue" x="435" y="568" width="200" height="50" rx="6"/><text class="th" x="535" y="591" text-anchor="middle" fill="#0C447C">請求アプリ</text><text class="ts" x="535" y="608" text-anchor="middle" fill="#185FA5">契約からスナップショット</text></g>
+<g id="n-htb" class="step-el"><rect class="box" x="700" y="568" width="180" height="50" rx="6"/><text class="th" x="790" y="591" text-anchor="middle" fill="#2b2b29">HTB請求一覧情報</text><text class="ts" x="790" y="608" text-anchor="middle" fill="#6b6a64">加入者コード</text></g>
+<g id="a-invoice" class="step-el"><rect class="c-blue" x="435" y="668" width="200" height="50" rx="6"/><text class="th" x="535" y="691" text-anchor="middle" fill="#0C447C">請求書発行アプリ</text><text class="ts" x="535" y="708" text-anchor="middle" fill="#185FA5">請求からスナップショット・合計金額</text></g>
 </svg>
 <div class="nav">
   <button onclick="go(-1)" id="prev" aria-label="前のステップ">&#8592;</button>
@@ -141,11 +143,11 @@ h1{font-size:22px;font-weight:500;margin:0 0 4px}
 </div>
 </div>
 
-<p class="foot">タグ：発行＝顧客ID新規采番／参照＝各マスタからLU取得／入力＝顧客が入力・直登録／登録＝別アプリから登録／更新＝今変わった／スナップショット＝その時点の値をコピーして保持（以後マスタが変わっても不変）。ポイント：案件管理アプリと顧客管理アプリの内容はエントリーチェックアプリで突合・精査して集約する。エントリーチェックアプリは、精査済み情報をもとに契約アプリの土台（契約ID・顧客ID・代理店ID・プランID）を作成するとともに、HTBエナジーへ精査済み情報を連携して供給を開始する。契約アプリは、HTBエナジーから共有される進捗データ（顧客ベース・サービスベース）を受けて供給開始日・加入者コードなどを登録し、供給ステータスを供給中に更新する（供給開始＝契約成立）。各アプリはIDだけ登録し、名称・料金・顧客情報は各マスタからLUで取得する。請求アプリ作成時に、契約・オプション契約とHTB請求一覧情報を加入者コードで同時に取り込む。</p>
+<p class="foot">タグ：発行＝顧客ID新規采番／参照＝各マスタからLU取得／入力＝顧客が入力・直登録／登録＝別アプリから登録／更新＝今変わった／スナップショット＝その時点の値をコピーして保持（以後マスタが変わっても不変）。ポイント：案件管理アプリと顧客管理アプリの内容はエントリーチェックアプリで突合・精査して集約する。エントリーチェックアプリは、精査済み情報をHTBエナジーへ連携して供給を開始する。HTBの進捗データ（顧客ベース・サービスベース）とエントリーチェックの精査済み情報は、いったんHTB集約データに集約する。契約アプリは、このHTB集約データをもとに作成し、供給開始日・加入者コードなどを登録する（供給開始＝契約成立）。各アプリはIDだけ登録し、名称・料金・顧客情報は各マスタからLUで取得する。請求アプリ作成時に、契約・オプション契約とHTB請求一覧情報を加入者コードで同時に取り込む。</p>
 </div>
 
 <script>
-const ALL=['n-wp','m-cust','n-mail','g-form','n-koukaku','a-cust','a-case','n-entry','a-contract','a-opt','m-option','m-agency','m-plan','n-htbenergy','n-htbprog-c','n-htbprog-s','a-bill','ar-wp-cm','ar-wp-mail','ar-mail-cust','ar-cust-cm','ar-cm-opt','ar-entry-htb','ar-htbe-progc','ar-htbe-progs','ar-progc-contract','ar-progs-contract','ar-entry-contract','ar-case-entry','ar-cust-entry','ar-gform-case','ar-koukaku-case','ar-contract-opt','ar-optm-opt','ar-agency-contract','ar-plan-contract','ar-contract-bill','ar-opt-bill','a-invoice','ar-bill-invoice','n-htb','ar-htb-bill'];
+const ALL=['n-wp','m-cust','n-mail','g-form','n-koukaku','a-cust','a-case','n-entry','a-contract','a-opt','m-option','m-agency','m-plan','n-htbenergy','n-htbprog-c','n-htbprog-s','n-htbagg','a-bill','ar-wp-cm','ar-wp-mail','ar-mail-cust','ar-cust-cm','ar-cm-opt','ar-entry-htb','ar-htbe-progc','ar-htbe-progs','ar-progc-agg','ar-progs-agg','ar-entry-agg','ar-agg-contract','ar-case-entry','ar-cust-entry','ar-gform-case','ar-koukaku-case','ar-contract-opt','ar-optm-opt','ar-agency-contract','ar-plan-contract','ar-contract-bill','ar-opt-bill','a-invoice','ar-bill-invoice','n-htb','ar-htb-bill'];
 const P={in:{l:'入力',b:'#F1EFE8',f:'#5F5E5A'},num:{l:'発行',b:'#EAF3DE',f:'#3B6D11'},lu:{l:'参照',b:'#E6F1FB',f:'#185FA5'},reg:{l:'登録',b:'#ECE6F5',f:'#5B3B9E'},chg:{l:'更新',b:'#FAEEDA',f:'#854F0B'},snap:{l:'スナップショット',b:'#E6F1FB',f:'#0C447C'},ext:{l:'連携',b:'#EAE7E0',f:'#5A584F'},empty:{l:'空',b:'#F1EFE8',f:'#6b6a64'}};
 const T={new:{l:'新規',b:'#EAF3DE',f:'#3B6D11'},upd:{l:'更新',b:'#E6F1FB',f:'#185FA5'}};
 const SC=[
@@ -169,21 +171,23 @@ const SC=[
   c:[{app:'後確電話',note:'申込内容を電話で最終確認',rows:[{k:'後確結果',v:'OK / NG',f:'in'}]},{app:'案件管理アプリ',tag:'upd',note:'後確結果を登録',rows:[{k:'申込コード',v:'LEAD20260601'},{k:'後確結果',v:'OK',f:'reg'}]}]},
  {a:['a-case','a-cust','n-entry','ar-case-entry','ar-cust-entry'],t:'⑩ 案件管理アプリ・顧客管理アプリ → エントリーチェックアプリ',d:'エントリーチェックアプリで、案件管理アプリと顧客管理アプリの内容を突き合わせて精査する。精査が済んだ確定内容（顧客情報・代理店ID・プランIDなど）をエントリーチェックアプリに集約する。これが精査済み確定情報の正本になる。申込コードで紐づく。',
   c:[{app:'案件管理アプリ',note:'精査の対象（案件側）',rows:[{k:'申込コード',v:'LEAD20260601'},{k:'代理店ID',v:'D001'},{k:'プランID',v:'P001'}]},{app:'顧客管理アプリ',note:'精査の対象（顧客側）',rows:[{k:'顧客ID',v:'C001'},{k:'氏名・住所',v:'中澤 / 東京'}]},{app:'エントリーチェックアプリ',tag:'new',note:'案件×顧客を突合・精査し確定内容を集約',rows:[{k:'突合チェック',v:'OK',f:'in'},{k:'申込コード',v:'LEAD20260601（紐づけキー）'},{k:'顧客ID',v:'C001',f:'reg'},{k:'代理店ID',v:'D001',f:'reg'},{k:'プランID',v:'P001',f:'reg'}]}]},
- {a:['n-entry','a-contract','ar-entry-contract'],t:'⑪ エントリーチェックアプリ → 契約アプリ（土台作成）',d:'エントリーチェックアプリの精査済み確定情報をもとに、契約アプリの土台を作成する。契約IDを采番し、顧客ID・申込コード・代理店ID・プランIDを引き継いで登録する。供給開始日はこの時点では未確定で、供給ステータスは「供給準備中」。申込コードで紐づく。',
-  c:[{app:'エントリーチェックアプリ',note:'精査済み確定情報（土台の元）',rows:[{k:'申込コード',v:'LEAD20260601'},{k:'顧客ID',v:'C001'},{k:'代理店ID',v:'D001'},{k:'プランID',v:'P001'}]},{app:'契約アプリ',tag:'new',note:'契約ID采番＋エントリーチェックの情報を引き継いで土台を作成',rows:[{k:'契約ID',v:'K001',f:'num'},{k:'顧客ID',v:'C001',f:'reg'},{k:'申込コード',v:'LEAD20260601',f:'reg'},{k:'代理店ID',v:'D001',f:'reg'},{k:'プランID',v:'P001',f:'reg'},{k:'供給ステータス',v:'供給準備中',f:'reg'}]}]},
- {a:['n-entry','n-htbenergy','ar-entry-htb'],t:'⑫ エントリーチェックアプリ → HTBエナジー（供給連携）',d:'エントリーチェックアプリの精査済み確定情報をHTBエナジーへ連携し、HTB側で電気の供給を開始する。供給開始日はHTB側で確定し、⑬で契約アプリに登録する。',
+ {a:['n-entry','n-htbenergy','ar-entry-htb'],t:'⑪ エントリーチェックアプリ → HTBエナジー（供給連携）',d:'エントリーチェックアプリの精査済み確定情報をHTBエナジーへ連携し、HTB側で電気の供給を開始する。供給開始日・加入者コードはHTB側で確定し、⑫で契約アプリの作成に使う。',
   c:[{app:'エントリーチェックアプリ → HTBエナジー',note:'精査済み確定情報を連携（供給依頼）',rows:[{k:'申込コード',v:'LEAD20260601',f:'ext'},{k:'顧客ID',v:'C001',f:'ext'},{k:'供給先住所',v:'東京',f:'ext'}]},{app:'HTBエナジー',note:'でんきの供給を開始',rows:[{k:'連携受領',v:'OK'},{k:'供給開始日',v:'2026/07/01（確定）',f:'in'}]}]},
- {a:['n-htbenergy','n-htbprog-c','n-htbprog-s','a-contract','ar-htbe-progc','ar-htbe-progs','ar-progc-contract','ar-progs-contract'],t:'⑬ HTBエナジー → HTB進捗データ（顧客／サービスベース）→ 契約アプリ',d:'HTBエナジーから進捗データの共有がある。データは「顧客ベース」（加入者コード・顧客単位の供給状況）と「サービスベース」（供給地点番号・供給開始日などサービス単位の状況）の2種類。この2つの進捗データを契約アプリに登録し、⑪で作成済みの契約アプリの土台を更新する（供給開始＝契約成立）。',
-  c:[{app:'HTBエナジー',note:'⑫の連携を受けて進捗データを共有（2種類）',rows:[{k:'共有区分',v:'顧客ベース / サービスベース',f:'ext'}]},{app:'HTB進捗データ（顧客ベース）',note:'顧客単位の進捗',rows:[{k:'加入者コード',v:'HTB-0001',f:'ext'},{k:'顧客供給状況',v:'供給中',f:'ext'}]},{app:'HTB進捗データ（サービスベース）',note:'サービス（供給地点）単位の進捗',rows:[{k:'供給地点番号',v:'SP-0001',f:'ext'},{k:'供給開始日',v:'2026/07/01',f:'ext'}]},{app:'契約アプリ',tag:'upd',note:'2つの進捗データを登録して土台を更新（供給開始＝契約成立）',rows:[{k:'契約ID',v:'K001'},{k:'顧客ID',v:'C001'},{k:'加入者コード',v:'HTB-0001',f:'chg'},{k:'供給地点番号',v:'SP-0001',f:'chg'},{k:'供給開始日',v:'2026/07/01',f:'chg'},{k:'供給ステータス',v:'供給中',f:'chg'}]}]},
- {a:['m-agency','m-plan','a-contract','ar-agency-contract','ar-plan-contract'],t:'⑭ 代理店マスタ・プランマスタ → 契約アプリ（ルックアップ）',d:'契約アプリに登録された代理店ID・プランIDをキーに、各マスタから名称などをルックアップして取得・表示する。代理店マスタから代理店名、プランマスタからプラン名・料金を引く。IDは登録、名称はマスタ参照という分担。',
+ {a:['n-htbenergy','n-htbprog-c','n-htbprog-s','ar-htbe-progc','ar-htbe-progs'],t:'⑫ HTBエナジー → HTB進捗データ（顧客ベース／サービスベース）',d:'HTBエナジーが進捗データを作成する。データは「顧客ベース」（加入者コード・顧客単位の供給状況）と「サービスベース」（供給地点番号・供給開始日などサービス単位の状況）の2種類。⑪の供給連携を受けて、HTB側でこの2種類の進捗データが作られる。',
+  c:[{app:'HTBエナジー',note:'⑪の連携を受けて進捗データを作成（2種類）',rows:[{k:'作成区分',v:'顧客ベース / サービスベース',f:'ext'}]},{app:'HTB進捗データ（顧客ベース）',tag:'new',note:'HTBが作成（顧客単位の進捗）',rows:[{k:'加入者コード',v:'HTB-0001',f:'ext'},{k:'顧客供給状況',v:'供給中',f:'ext'}]},{app:'HTB進捗データ（サービスベース）',tag:'new',note:'HTBが作成（供給地点単位の進捗）',rows:[{k:'供給地点番号',v:'SP-0001',f:'ext'},{k:'供給開始日',v:'2026/07/01',f:'ext'}]}]},
+ {a:['n-htbprog-c','n-htbprog-s','n-entry','n-htbagg','ar-progc-agg','ar-progs-agg','ar-entry-agg'],t:'⑬ HTB進捗データ（顧客・サービス）・エントリーチェックアプリ → HTB集約データ',d:'HTBからの2種類の進捗データ（顧客ベース・サービスベース）と、エントリーチェックアプリの精査済み情報を、HTB集約データに一度集約する。HTBからのデータをここで一本化し、以降の契約アプリ作成はこの集約データを使う。',
+  c:[{app:'HTB進捗データ（顧客ベース）',note:'集約の対象',rows:[{k:'加入者コード',v:'HTB-0001'},{k:'顧客供給状況',v:'供給中'}]},{app:'HTB進捗データ（サービスベース）',note:'集約の対象',rows:[{k:'供給地点番号',v:'SP-0001'},{k:'供給開始日',v:'2026/07/01'}]},{app:'エントリーチェックアプリ',note:'精査済み確定情報',rows:[{k:'顧客ID',v:'C001'},{k:'代理店ID',v:'D001'},{k:'プランID',v:'P001'},{k:'申込コード',v:'LEAD20260601'}]},{app:'HTB集約データ',tag:'new',note:'HTBデータと精査済み情報を一度集約',rows:[{k:'加入者コード',v:'HTB-0001',f:'reg'},{k:'供給地点番号',v:'SP-0001',f:'reg'},{k:'供給開始日',v:'2026/07/01',f:'reg'},{k:'顧客ID',v:'C001',f:'reg'},{k:'代理店ID',v:'D001',f:'reg'},{k:'プランID',v:'P001',f:'reg'},{k:'申込コード',v:'LEAD20260601',f:'reg'}]}]},
+ {a:['n-htbagg','a-contract','ar-agg-contract'],t:'⑭ HTB集約データ → 契約アプリ',d:'HTB集約データ（HTBの進捗データ＋エントリーチェックの精査済み情報）をもとに契約アプリを作成する。契約IDを采番し、顧客ID・代理店ID・プランID・申込コード・供給開始日・加入者コード・供給地点番号などを登録する（供給開始＝契約成立）。',
+  c:[{app:'HTB集約データ',note:'契約作成の元（集約済み）',rows:[{k:'加入者コード',v:'HTB-0001'},{k:'供給地点番号',v:'SP-0001'},{k:'供給開始日',v:'2026/07/01'},{k:'顧客ID',v:'C001'},{k:'代理店ID',v:'D001'},{k:'プランID',v:'P001'}]},{app:'契約アプリ',tag:'new',note:'契約ID采番＋集約データを登録して作成（供給開始＝契約成立）',rows:[{k:'契約ID',v:'K001',f:'num'},{k:'顧客ID',v:'C001',f:'reg'},{k:'申込コード',v:'LEAD20260601',f:'reg'},{k:'代理店ID',v:'D001',f:'reg'},{k:'プランID',v:'P001',f:'reg'},{k:'加入者コード',v:'HTB-0001',f:'reg'},{k:'供給地点番号',v:'SP-0001',f:'reg'},{k:'供給開始日',v:'2026/07/01',f:'reg'},{k:'供給ステータス',v:'供給中',f:'reg'}]}]},
+ {a:['m-agency','m-plan','a-contract','ar-agency-contract','ar-plan-contract'],t:'⑮ 代理店マスタ・プランマスタ → 契約アプリ（ルックアップ）',d:'契約アプリに登録された代理店ID・プランIDをキーに、各マスタから名称などをルックアップして取得・表示する。代理店マスタから代理店名、プランマスタからプラン名・料金を引く。IDは登録、名称はマスタ参照という分担。',
   c:[{app:'代理店マスタ',note:'代理店IDで取得',rows:[{k:'代理店ID',v:'D001（キー）'},{k:'代理店名',v:'○○代理店',f:'lu'}]},{app:'プランマスタ',note:'プランIDで取得',rows:[{k:'プランID',v:'P001（キー）'},{k:'プラン名',v:'プランA',f:'lu'},{k:'月額',v:'¥10,000',f:'lu'}]},{app:'契約アプリ',tag:'upd',note:'各マスタからLUして表示',rows:[{k:'契約ID',v:'K001'},{k:'代理店名',v:'○○代理店（代理店マスタLU）',f:'lu'},{k:'プラン名',v:'プランA（プランマスタLU）',f:'lu'}]}]},
- {a:['a-contract','a-opt','ar-contract-opt'],t:'⑮ 契約アプリ → オプション契約アプリ',d:'⑪〜⑬で契約アプリの土台がすでにできているので、オプション契約アプリは契約アプリを参照して作成する。オプション契約IDを採番し、契約アプリから契約ID・顧客ID・申込コードを引き継ぎ、選択されたオプションID（マスタ参照キー）を登録する。契約IDで契約と紐づく。',
+ {a:['a-contract','a-opt','ar-contract-opt'],t:'⑯ 契約アプリ → オプション契約アプリ',d:'⑭で契約アプリがすでにできているので、オプション契約アプリは契約アプリを参照して作成する。オプション契約IDを採番し、契約アプリから契約ID・顧客ID・申込コードを引き継ぎ、選択されたオプションID（マスタ参照キー）を登録する。契約IDで契約と紐づく。',
   c:[{app:'契約アプリ',note:'参照元（作成済みの土台）',rows:[{k:'契約ID',v:'K001'},{k:'顧客ID',v:'C001'},{k:'申込コード',v:'LEAD20260601'}]},{app:'オプション契約アプリ',tag:'new',note:'契約アプリを参照＋オプション契約ID採番・オプションIDを登録',rows:[{k:'オプション契約ID',v:'OP001',f:'num'},{k:'契約ID',v:'K001（契約アプリ参照）',f:'lu'},{k:'顧客ID',v:'C001（契約から）',f:'lu'},{k:'オプションID',v:'OPT01',f:'reg'}]}]},
- {a:['m-option','m-cust','a-opt','ar-optm-opt','ar-cm-opt'],t:'⑯ オプションマスタ・顧客マスタ → オプション契約アプリ（ルックアップ）',d:'⑭で登録されたオプションID・顧客IDをキーに、オプションマスタからオプション名・料金を、顧客マスタから氏名などの顧客情報をルックアップして取得・表示する。契約アプリと同じく、オプション契約アプリの顧客情報もマスタから取得できるようにしておく。オプションが増えてもマスタ追加だけで対応できる。',
+ {a:['m-option','m-cust','a-opt','ar-optm-opt','ar-cm-opt'],t:'⑰ オプションマスタ・顧客マスタ → オプション契約アプリ（ルックアップ）',d:'⑯で登録されたオプションID・顧客IDをキーに、オプションマスタからオプション名・料金を、顧客マスタから氏名などの顧客情報をルックアップして取得・表示する。契約アプリと同じく、オプション契約アプリの顧客情報もマスタから取得できるようにしておく。オプションが増えてもマスタ追加だけで対応できる。',
   c:[{app:'オプションマスタ',note:'オプションIDで取得',rows:[{k:'オプションID',v:'OPT01（キー）'},{k:'オプション名',v:'蓄電池オプション',f:'lu'},{k:'月額',v:'¥3,000',f:'lu'}]},{app:'顧客マスタ',note:'顧客IDで取得',rows:[{k:'顧客ID',v:'C001（キー）'},{k:'氏名',v:'中澤',f:'lu'},{k:'住所',v:'東京',f:'lu'}]},{app:'オプション契約アプリ',tag:'upd',note:'各マスタからLUして表示',rows:[{k:'オプション契約ID',v:'OP001'},{k:'オプション名',v:'蓄電池オプション（オプションマスタLU）',f:'lu'},{k:'氏名',v:'中澤（顧客マスタLU）',f:'lu'}]}]},
- {a:['a-contract','a-opt','a-bill','n-htb','ar-contract-bill','ar-opt-bill','ar-htb-bill'],t:'⑰ 契約・オプション契約・HTB請求一覧情報 → 請求アプリ（スナップショット）',d:'契約アプリとオプション契約アプリから、請求時点の契約内容・金額をスナップショットでコピーして請求アプリを作成する（マスタからのLUではない）。請求IDを採番し、あわせてHTBの請求一覧情報を加入者コードで突合して同時に取り込む。コピーなので、あとからプランマスタの料金が改定されても、この請求の金額は変わらない。',
+ {a:['a-contract','a-opt','a-bill','n-htb','ar-contract-bill','ar-opt-bill','ar-htb-bill'],t:'⑱ 契約・オプション契約・HTB請求一覧情報 → 請求アプリ（スナップショット）',d:'契約アプリとオプション契約アプリから、請求時点の契約内容・金額をスナップショットでコピーして請求アプリを作成する（マスタからのLUではない）。請求IDを採番し、あわせてHTBの請求一覧情報を加入者コードで突合して同時に取り込む。コピーなので、あとからプランマスタの料金が改定されても、この請求の金額は変わらない。',
   c:[{app:'契約アプリ',note:'コピー元（電気の契約内容・金額）',rows:[{k:'契約ID',v:'K001'},{k:'顧客ID',v:'C001'},{k:'プラン名',v:'プランA'},{k:'電気料金',v:'¥10,000'}]},{app:'オプション契約アプリ',note:'コピー元（オプションの内容・金額）',rows:[{k:'オプション契約ID',v:'OP001'},{k:'オプション名',v:'蓄電池オプション'},{k:'月額',v:'¥3,000'}]},{app:'HTB請求一覧情報',note:'加入者コードで突合（同時取り込み）',rows:[{k:'加入者コード',v:'HTB-0001',f:'in'},{k:'使用量・従量料金',v:'HTBから受領',f:'ext'}]},{app:'請求アプリ',tag:'new',note:'請求ID采番＋契約/OP/HTBの値をコピーして保持',rows:[{k:'請求ID',v:'B001',f:'num'},{k:'顧客ID',v:'C001',f:'snap'},{k:'プラン名・電気料金',v:'プランA / ¥10,000',f:'snap'},{k:'オプション名・料金',v:'蓄電池 / ¥3,000',f:'snap'},{k:'加入者コード',v:'HTB-0001',f:'snap'}]}]},
- {a:['a-bill','a-invoice','ar-bill-invoice'],t:'⑱ 請求アプリ → 請求書発行アプリ（スナップショット）',d:'請求アプリの明細を請求書発行アプリへスナップショットでコピーし、合計金額を確定して請求書を発行する。発行済みの請求書は、あとから契約内容やマスタが変わっても内容が変わらない。',
+ {a:['a-bill','a-invoice','ar-bill-invoice'],t:'⑲ 請求アプリ → 請求書発行アプリ（スナップショット）',d:'請求アプリの明細を請求書発行アプリへスナップショットでコピーし、合計金額を確定して請求書を発行する。発行済みの請求書は、あとから契約内容やマスタが変わっても内容が変わらない。',
   c:[{app:'請求アプリ',note:'コピー元（請求明細）',rows:[{k:'請求ID',v:'B001'},{k:'顧客ID',v:'C001'},{k:'電気料金',v:'¥10,000'},{k:'オプション料金',v:'¥3,000'}]},{app:'請求書発行アプリ',tag:'new',note:'請求明細をコピーして保持＋合計金額を確定',rows:[{k:'請求ID',v:'B001',f:'snap'},{k:'顧客ID',v:'C001',f:'snap'},{k:'明細（電気・オプション）',v:'¥10,000 / ¥3,000',f:'snap'},{k:'合計金額',v:'¥13,000',f:'num'}]}]}
 ];
 
